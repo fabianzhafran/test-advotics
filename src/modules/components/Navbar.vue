@@ -7,14 +7,16 @@
           powered by <img src="../../assets/img/advotics-logo.jpg" class="d-inline-block align-top advotics-logo-mini" alt="Advotics Logo">
         </span>
       </b-navbar-brand>
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav class="ml-auto">
-          <div class="username-wrapper">
-            <p>Username</p>
-            <p>Company Name</p>
-          </div>
-        </b-navbar-nav>
-      </b-collapse>
+      <b-navbar-nav class="ml-auto">
+        <div>
+          <p class="username">Username</p>
+          <p class="company-name">Company Name</p>
+        </div>
+        <div class="logo-wrapper">
+          <img src="../../assets/img/profile.png" class="d-inline-block align-top" alt="Profile">
+          <img src="../../assets/img/logout.png" class="d-inline-block align-top logout" alt="Log Out">
+        </div>
+      </b-navbar-nav>
     </b-navbar>
   </div>
 </template>
@@ -54,15 +56,34 @@ export default {
 
 .navbar {
   height: 8vh;
-  padding: 0 2vw;
-  box-shadow: 0px 3px 6px #00000029;;
+  padding: 0 40px;
+  box-shadow: 0px 3px 6px #00000029;
 }
 
 .white {
   background-color: white !important;
 }
 
-.username-wrapper {
-  
+.username {
+  font-size: 1rem;
+  color: #727272;
+}
+
+.company-name {
+  font-size: 0.7rem;
+  line-height: 0;
+  color: #727272;
+}
+
+.logo-wrapper {
+  width: 75px;
+  display: flex;
+  align-items: center;
+  margin-left: 2vw;
+  justify-content: space-between;
+}
+
+.logout {
+  height: 15px;
 }
 </style>
