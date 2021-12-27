@@ -23,14 +23,10 @@
 
 <script>
 export default {
-  name: 'Navbar',
-  props: {
-    msg: String
-  }
+  name: 'Navbar'
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .logo {
   height: 20px;
@@ -56,7 +52,7 @@ export default {
 
 .navbar {
   height: 8vh;
-  padding: 0 40px;
+  padding: 0 30px;
   box-shadow: 0px 3px 6px #00000029;
 }
 
@@ -76,10 +72,10 @@ export default {
 }
 
 .logo-wrapper {
-  width: 75px;
+  width: 65px;
   display: flex;
   align-items: center;
-  margin-left: 2vw;
+  margin-left: 20px;
   justify-content: space-between;
 }
 
