@@ -53,10 +53,15 @@
           </div>
         </div>
         <div class="market-insight">
-          <h4>MARKET INSIGHT</h4>
+          <h4>MARKET INSIGHTS</h4>
+          <div class="help">
+            <img src="../assets/img/help.png" class="help-icon">
+            Click here for help
+            <img src="../assets/img/drop-down.png" class="reverse-drop-down-icon">
+          </div>
         </div>
         <div class="sales-turnover">
-
+          <SaleTurnover />
         </div>
         <div class="sales-warper">
           <GraphCard />
@@ -71,9 +76,10 @@
 <script>
 import Navbar from '../modules/components/Navbar.vue'
 import Sidebar from '../modules/components/Sidebar.vue'
-import CalendarMonth from '../modules/components/Calendar/CalendarMonth.vue'
+import CalendarMonth from '../modules/components/Calendar/Calendar.vue'
 import GraphCard from '../modules/components/PurchaseGraph/GraphCard.vue'
 import SKUCard from '../modules/components/SKU/SKUCard.vue'
+import SaleTurnover from '../modules/components/SaleTurnover.vue'
 
 import dayjs from "dayjs";
 
@@ -83,8 +89,9 @@ export default {
     Navbar,
     Sidebar,
     CalendarMonth,
+    GraphCard,
     SKUCard,
-    GraphCard
+    SaleTurnover
   },
   data() {
     return {
@@ -108,9 +115,6 @@ export default {
   methods: {
     setInterval(interval) {
       this.chosenInterval = interval
-    },
-    onClickCalendar() {
-
     },
     closePopover() {
       this.$refs.popover.$emit('close')
@@ -161,7 +165,7 @@ export default {
 .content {
   display: flex;
   flex-direction: row;
-  min-height: 90vh;
+  min-height: 95vh;
   width: 100%;
   background: #F7F7F7 0% 0% no-repeat padding-box;
 }
@@ -266,8 +270,41 @@ h1 {
   margin-top: 10px;
 }
 
+.market-insight {
+  margin: 20px 0;
+  background: #37B04C 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.market-insight > h4 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.help {
+  color: white;
+}
+
+.reverse-drop-down-icon {
+  height: 20px;
+  color: white;
+  transform: rotate(180deg);
+  margin: 0 10px;
+}
+
+.sales-turnover {
+  width: 25%;
+}
+
 .sales-warper {
   display: flex;
   flex-direction: row;
+  margin: 0;
+  padding: 0;
 }
 </style>

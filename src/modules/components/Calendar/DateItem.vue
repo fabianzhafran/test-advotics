@@ -13,7 +13,7 @@
 import dayjs from "dayjs";
 
 export default {
-  name: "CalendarMonthDayItem",
+  name: "DateItem",
 
   props: {
     day: {

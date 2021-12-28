@@ -28,7 +28,7 @@ export default {
 <style scoped>
 .graph-card {
   flex: 2;
-  margin: 10px 10px;
+  margin: 10px 10px 10px 0;
   padding: 0 15px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 2px 6px #0000000A;

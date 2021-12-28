@@ -1,5 +1,5 @@
 <template>
-  <div class="calendar-date-indicator">{{ selectedMonth }}</div>
+  <div class="calendar-month-name">{{ selectedMonth }}</div>
 </template>
 
 <script>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style scoped>
-.calendar-date-indicator {
+.calendar-month-name {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--grey-00);

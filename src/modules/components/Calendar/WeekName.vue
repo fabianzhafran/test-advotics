@@ -24,12 +24,12 @@ ol li {
   border-bottom: 0.5px solid #D2D2D2;
 }
 
-.day-of-week {
+.week-name {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
 
-.day-of-week > * {
+.week-name > * {
   text-align: right;
   padding-right: 5px;
 }

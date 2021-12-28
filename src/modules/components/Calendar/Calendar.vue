@@ -1,16 +1,16 @@
 <template>
   <div class="calendar-month">
     <div class="calendar-month-header">
-      <CalendarDateIndicator
+      <MonthName
         :selected-date="checkMore ? endDate : startDate"
         class="calendar-month-header-selected-month"
       />
     </div>
 
-    <CalendarWeekdays/>
+    <WeekName />
 
     <ol class="days-grid">
-      <CalendarMonthDayItem
+      <DateItem
         v-for="day in days"
         :key="day.date"
         :day="day"
@@ -25,9 +25,9 @@
 import dayjs from "dayjs";
 import weekday from "dayjs/plugin/weekday";
 import weekOfYear from "dayjs/plugin/weekOfYear";
-import CalendarMonthDayItem from "./CalendarMonthDayItem";
-import CalendarDateIndicator from "./CalendarDateIndicator";
-import CalendarWeekdays from "./CalendarWeekdays";
+import DateItem from "./DateItem";
+import MonthName from "./MonthName";
+import WeekName from "./WeekName";
 
 dayjs.extend(weekday);
 dayjs.extend(weekOfYear);
@@ -36,9 +36,9 @@ export default {
   name: "CalendarMonth",
 
   components: {
-    CalendarMonthDayItem,
-    CalendarDateIndicator,
-    CalendarWeekdays
+    DateItem,
+    MonthName,
+    WeekName
   },
 
   props: {
@@ -110,7 +110,6 @@ export default {
         "month"
       );
 
-      // Cover first day of the month being sunday (firstDayOfTheMonthWeekday === 0)
       const visibleNumberOfDaysFromPreviousMonth = firstDayOfTheMonthWeekday
         ? firstDayOfTheMonthWeekday - 1
         : 6;
@@ -159,10 +158,6 @@ export default {
   methods: {
     getWeekday(date) {
       return dayjs(date).weekday();
-    },
-
-    selectDate(newSelectedDate) {
-      this.selectedDate = newSelectedDate;
     }
   }
 };
