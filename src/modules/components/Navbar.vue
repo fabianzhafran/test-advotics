@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="navbar">
     <b-navbar toggleable="lg" type="light" variant="light" class="navbar white">
       <b-navbar-brand href="#">
         <img src="../../assets/img/advotics-logo.jpg" class="d-inline-block align-top advotics-logo" alt="Advotics Logo">
@@ -28,6 +28,13 @@ export default {
 </script>
 
 <style scoped>
+.navbar {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+}
+
 .logo {
   height: 20px;
 }

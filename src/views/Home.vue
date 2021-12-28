@@ -1,8 +1,8 @@
 <template>
   <div>
     <Navbar />
+    <Sidebar />
     <div class="content">
-      <Sidebar />
       <div class="dashboard">
         <div class="top-row">
           <h1>Dashboard</h1>
@@ -13,7 +13,7 @@
             <b-button 
               id="calendar-popover"
               class="drop-down-icon drop-down-button">
-              <img src="../assets/img/drop-down.png" class="drop-down-icon" @click="onClickCalendar">
+              <img src="../assets/img/drop-down.png" class="drop-down-icon">
             </b-button>
             <b-popover
               ref="popover"
@@ -166,6 +166,7 @@ export default {
   display: flex;
   flex-direction: row;
   min-height: 95vh;
+  padding: 50px 0 0 50px;
   width: 100%;
   background: #F7F7F7 0% 0% no-repeat padding-box;
 }

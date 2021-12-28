@@ -17,6 +17,11 @@ export default {
 
 <style scoped>
 .sidebar {
+  position: fixed;
+  background: white;
+  height: 100%;
+  top: 72px;
+  z-index: 0;
   width: 75px;
   border: 0.5px solid #D2D2D2;
 }
