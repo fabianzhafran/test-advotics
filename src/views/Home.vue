@@ -53,12 +53,15 @@
           </div>
         </div>
         <div class="market-insight">
-          <h3>MARKET INSIGHT</h3>
+          <h4>MARKET INSIGHT</h4>
         </div>
         <div class="sales-turnover">
 
         </div>
-        
+        <div class="sales-warper">
+          <SKUCard :msg="'BEST SELLING SKU'" />
+          <SKUCard :msg="'TOP COMPETITOR SKU'" />
+        </div>
       </div>
     </div>
   </div>
@@ -68,6 +71,7 @@
 import Navbar from '../modules/components/Navbar.vue'
 import Sidebar from '../modules/components/Sidebar.vue'
 import CalendarMonth from '../modules/components/Calendar/CalendarMonth.vue'
+import SKUCard from '../modules/components/SKU/SKUCard.vue'
 
 import dayjs from "dayjs";
 
@@ -76,7 +80,8 @@ export default {
   components: {
     Navbar,
     Sidebar,
-    CalendarMonth
+    CalendarMonth,
+    SKUCard
   },
   data() {
     return {
@@ -135,8 +140,8 @@ export default {
       }
       
       if (!invalidDate) {
-        this.startDate = this.startDateJs.format().split('T')[0]
-        this.endDate = this.endDateJs.format().split('T')[0]
+        this.startDate = this.startDateJs.format('YYYY MMMM DD')
+        this.endDate = this.endDateJs.format('YYYY MMMM DD')
       }
     },
     calculateDateDifference(dateA, dateB) {
@@ -155,6 +160,7 @@ export default {
   flex-direction: row;
   min-height: 90vh;
   width: 100%;
+  background: #F7F7F7 0% 0% no-repeat padding-box;
 }
 
 .dashboard {
@@ -172,6 +178,9 @@ h1 {
 }
 
 .calendar-button {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
   box-shadow: 0px 2px 3px #00000029;
   width: 40vw;
   height: 60px;
@@ -252,5 +261,10 @@ h1 {
 
 .apply-button {
   margin-top: 10px;
+}
+
+.sales-warper {
+  display: flex;
+  flex-direction: row;
 }
 </style>
