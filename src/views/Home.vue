@@ -59,6 +59,7 @@
 
         </div>
         <div class="sales-warper">
+          <GraphCard />
           <SKUCard :msg="'BEST SELLING SKU'" />
           <SKUCard :msg="'TOP COMPETITOR SKU'" />
         </div>
@@ -71,6 +72,7 @@
 import Navbar from '../modules/components/Navbar.vue'
 import Sidebar from '../modules/components/Sidebar.vue'
 import CalendarMonth from '../modules/components/Calendar/CalendarMonth.vue'
+import GraphCard from '../modules/components/PurchaseGraph/GraphCard.vue'
 import SKUCard from '../modules/components/SKU/SKUCard.vue'
 
 import dayjs from "dayjs";
@@ -81,7 +83,8 @@ export default {
     Navbar,
     Sidebar,
     CalendarMonth,
-    SKUCard
+    SKUCard,
+    GraphCard
   },
   data() {
     return {

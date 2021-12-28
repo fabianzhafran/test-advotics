@@ -48,7 +48,7 @@ export default {
 .detil-product {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   margin-left: 10px;
   width: 80%;
 }
@@ -57,6 +57,7 @@ export default {
   letter-spacing: 0px;
   color: #4D4F5C;
   font-size: 0.9rem;
+  margin: 2px 0 0 0;
 }
 
 .best-selling .nama-product {
